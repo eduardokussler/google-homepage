@@ -1,0 +1,135 @@
+html {
+  font-family: Roboto, sans-serif;
+  --link-color: #222;
+  size: 15px;
+  display: grid;
+  
+}
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+body {
+  display: grid;
+  grid-template-rows: 9vh 80vh 9vh;
+  grid-template-columns: 1;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: header;
+  
+}
+
+header a, header img {
+  margin: 5px 5px 0 5px;
+}
+
+a {
+  font-family: Arial, sans-serif;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 3;
+  grid-template-areas: 
+  "img img"
+  "input input"
+  "search-button search-lucky";
+  grid-column-gap: 10px;
+}
+
+form input {
+  grid-area: input;
+  margin: 5px 0 5px 0;
+  height: 30px;
+  border-radius: 30px;
+  border: 2px rgb(223, 225, 229) solid;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+  padding-right: 15px;
+}
+
+form figure {
+  grid-area: img;
+}
+
+#search-button {
+  grid-area: search-button;
+}
+
+#search-lucky {
+  grid-area: search-lucky;;
+}
+
+button {
+  margin-top: 10px;
+  height: 36px;
+  width: 160px;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: var(--link-color);
+  background-color: rgb(248, 249, 250);
+  border: 1px rgb(248, 249, 250) solid;
+}
+
+footer {
+  color: rgb(112, 117, 122);
+  background-color: #F2F2F2;
+  grid-area: footer;
+}
+.footer-links {
+  size: 14px;
+  padding: 0px 10px 0 0;
+  display: grid;
+  grid-template-columns: 30vw 36vw 30vw;
+  grid-template-areas: 
+  "left-links . right-links";
+  justify-items: stretch;
+  align-items: center;
+}
+
+.footer-links a {
+  padding: 0 20px 5px 10px;
+  color:rgb(112, 117, 122);
+}
+
+.right-links {
+  grid-area: right-links;
+  justify-self: end;
+  margin-left: 50px;
+}
+
+.left-links {
+  grid-area: left-links;
+}
+
+.footer-country {
+  size: 15px;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid rgb(218, 220, 224);
+  margin-bottom: 30px;
+}
